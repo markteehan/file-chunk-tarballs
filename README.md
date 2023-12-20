@@ -72,13 +72,13 @@ Start the Streaming Service. This dos window will stay open; leave it open.
 
 In Explorer (or a second cmd window), start the uploader job. This window will close. 
 ```
-    C:\data-streaming\scripts\streaming_uploader_start.bat
+    C:\data-streaming\scripts\uploader_start.bat
 ```
 To test that the uploader is functioning, copy a .JPG file to C:\data-streaming\local\upload\queued. With 30 seconds or so, this file should be moved to c:\data-streaming\local\upload\finished (or error). Check the logfile in c:\data-streaming\local\logs
 
 (optional) Start the downloader    
 ```
-    C:\data-streaming\streaming_downloader_start.bat
+    C:\data-streaming\downloader_start.bat
 ```
 JPG files that were succesfully uploaded will be subsequently downloaded to C:\data-streaming\download 
 
@@ -90,13 +90,13 @@ Start the Streaming Service. This process runs in the background
 
 In a bash shell, start the uploader job. 
 ```
-    scripts/streaming_uploader_start.sh
+    scripts/uploader_start.sh
 ```
 To test that the uploader is functioning, copy a .JPG file to local/upload/queued. With 30 seconds or so, this file should be moved to finished (or error). Check the logfile in local/logs
 
 (optional) Start the downloader    
 ```
-    scripts/streaming_downloader_start.sh
+    scripts/downloader_start.sh
 ```
 JPG files that were succesfully uploaded will be subsequently downloaded to data-streaming/download 
 
