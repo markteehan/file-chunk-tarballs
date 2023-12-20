@@ -64,14 +64,24 @@ Steps 1/ and 2/ are the same
 
 
 ## Start the Streaming Service
-Follow the steps to start the streaming service in a CMD window:
- Configuration Complete. Follow these steps to begin streaming
- 1. Start the Streaming Service 
-    c:\data-streaming\scripts\streaming_service_start.bat
- 2. Start the Uploader
-    %C:\data-streaming\scripts\streaming_uploader_start.bat
- 3. Start the Downloader (optional)
-    C:\data-streaming\streaming_uploader_stop.bat
+### Windows
+Start the Streaming Service. This dos window will stay open; leave it open.
+```
+    C:\data-streaming\scripts\streaming_service_start.bat
+```
+
+In Explorer (or a second cmd window), start the uploader job. This window will close. 
+```
+    C:\data-streaming\scripts\streaming_uploader_start.bat
+```
+To test that the uploader is functioning, copy a .JPG file to C:\data-streaming\local\upload\queued. With 30 seconds or so, this file should be moved to c:\data-streaming\local\upload\finished (or error). Check the logfile in c:\data-streaming\local\logs
+
+(optional) Start the downloader    
+```
+    C:\data-streaming\streaming_downloader_stop.bat
+```
+JPG files that were succesfully uploaded will be subsequently downloaded to C:\data-streaming\download 
+
 
 
 
