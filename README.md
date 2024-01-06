@@ -4,6 +4,19 @@ The tarball contains an uploader and a downloader: the streaming service starts 
 Elevated privileges (admin or root account) are not required: the service runs in a CMD window.
 
 
+## What it does
+### Source
+```
+Found 5 potential files 
+someLargeFile.JPG: (size 16500000 bytes) producing 40 chunks 
+someLargeFile.JPG: Finished processing all chunks (sent 40 file chunk(s) to Kafka). MD5=aab6b3ed18555323dcca79713aa115ae 
+```
+
+### Sink
+```
+someLargeFile.JPG: (size 16500000) - merge from 40 chunks completed
+```
+
 ## Requirements
 ### Windows
 1/ Upload (or create) the credentials file env.cmd to your Documents Folder (see "Credentials" below)
