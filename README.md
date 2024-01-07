@@ -9,12 +9,16 @@ Elevated privileges (admin or root account) are not required: the service runs i
 ```
 Found 5 potential files 
 someLargeFile.JPG: (size 16500000 bytes) producing 40 chunks 
-someLargeFile.JPG: Finished processing all chunks (sent 40 file chunk(s) to Kafka). MD5=aab6b3ed18555323dcca79713aa115ae 
+someLargeFile.JPG: Finished processing all chunks (sent 40 file chunk(s) to Kafka). MD5=c31f4dbb504d805c389a26d3680d0f7b
 ```
 
 ### Sink
 ```
-someLargeFile.JPG: (size 16500000) - merge from 40 chunks completed
+someLargeFile.JPG: (size 16500000) - merge from 40 chunks completed MD5=c31f4dbb504d805c389a26d3680d0f7b
+
+OR
+ERROR someLargeFile.JPG: (size 16500000) - merge from 40 chunks failed - MD5 mismatch. MD5 (source)=c31f4dbb504d805c389a26d3680d0f7b MD5 (target)=889af9ce64b6395960aaf2a5e307cd6d
+
 ```
 
 ## Requirements
